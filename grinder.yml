@@ -1,0 +1,32 @@
+name: Grinder
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'   # co 6 godzin
+  workflow_dispatch:          # pozwala odpalić ręcznie z zakładki Actions
+
+# nie pozwól, żeby dwa przebiegi działały naraz
+concurrency:
+  group: grinder
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Playwright
+        run: |
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Run grinder
+        run: node run.js
+        env:
+          RUN_MINUTES: '340'
