@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         Auto Grinder with Captcha Solver
-// @namespace    https://github.com/YOUR_USERNAME/auto-grinder
+// @namespace    https://github.com/Smieszekk/auto-grinder
 // @version      6.1
 // @description  Auto-clicks the main button and Boost, and answers the "Quick check" math prompt.
 // @match        https://grinding.tnstats.dev/*
 // @run-at       document-idle
 // @grant        none
-// @updateURL    https://raw.githubusercontent.com/YOUR_USERNAME/auto-grinder/main/auto-grinder.user.js
-// @downloadURL  https://raw.githubusercontent.com/YOUR_USERNAME/auto-grinder/main/auto-grinder.user.js
+// @updateURL    https://raw.githubusercontent.com/Smieszekk/auto-grinder/main/auto-grinder.user.js
+// @downloadURL  https://raw.githubusercontent.com/Smieszekk/auto-grinder/main/auto-grinder.user.js
 // ==/UserScript==
 
 (function () {
